@@ -51,7 +51,12 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
 -- colortheme
-  use {"bluz71/vim-moonfly-colors", as = "moonfly",} 
+  use {"bluz71/vim-moonfly-colors", as = "moonfly",}
+  use "jacoborus/tender.vim"
+  use { 'kepano/flexoki-neovim', as = 'flexoki' }
+  use "rebelot/kanagawa.nvim"
+  use 'marko-cerovac/material.nvim'
+  use { "rose-pine/neovim", as = "rose-pine" }
 
 -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -77,12 +82,20 @@ return packer.startup(function(use)
 
   -- Treesitter
   use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
-    }
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  }
+
+  -- Comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
