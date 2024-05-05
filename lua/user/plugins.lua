@@ -106,7 +106,11 @@ local plugins = {
             -- Configuration here, or leave empty to use defaults
         })
     end
-  }
+  },
+
+  -- Start Screen
+  "goolord/alpha-nvim",
+
 
 
 }
