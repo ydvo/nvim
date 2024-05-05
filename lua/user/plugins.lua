@@ -80,7 +80,34 @@ local plugins = {
       default_file_explorer = true,
     })
   end,
+  },
+
+  -- Ultimate AutoPair
+  {
+    'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter','CmdlineEnter'},
+    branch='v0.6', --recommended as each new version will have breaking changes
+    opts={},
+    config = function()
+      require("ultimate-autopair").setup({
+      })
+    end,
+  },
+
+  -- Rainbow Delimiters
+  "HiPhish/rainbow-delimiters.nvim",
+
+  -- Surround
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
   }
+
 
 }
 
