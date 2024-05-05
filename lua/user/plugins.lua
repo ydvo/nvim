@@ -67,7 +67,21 @@ local plugins = {
   {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
   -- Better Buffer Deletion
-  "moll/vim-bbye"
+  "moll/vim-bbye",
+
+  -- Oil
+  {
+  'stevearc/oil.nvim',
+  opts = {},
+  -- Optional dependencies
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function()
+    require("oil").setup({
+      default_file_explorer = true,
+    })
+  end,
+  }
+
 }
 
 local opts = {}
