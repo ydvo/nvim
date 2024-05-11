@@ -82,17 +82,17 @@ local plugins = {
   end,
   },
 
-  -- Ultimate AutoPair
-  {
-    'altermo/ultimate-autopair.nvim',
-    event={'InsertEnter','CmdlineEnter'},
-    branch='v0.6', --recommended as each new version will have breaking changes
-    opts={},
-    config = function()
-      require("ultimate-autopair").setup({
-      })
-    end,
-  },
+  -- -- Ultimate AutoPair
+  -- {
+  --   'altermo/ultimate-autopair.nvim',
+  --   event={'InsertEnter','CmdlineEnter'},
+  --   branch='v0.6', --recommended as each new version will have breaking changes
+  --   opts={},
+  --   config = function()
+  --     require("ultimate-autopair").setup({
+  --     })
+  --   end,
+  -- },
 
   -- Rainbow Delimiters
   "HiPhish/rainbow-delimiters.nvim",
@@ -111,7 +111,34 @@ local plugins = {
   -- Start Screen
   "goolord/alpha-nvim",
 
+  -- WhichKey
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 500
+    end,
+    opts = {
+      spelling = {
+      enabled = true, -- enabling this will show WhichKey when pressing z= to select spelling suggestions
+      suggestions = 10, -- how many suggestions should be shown in the list?
+    },
+    }
+  },
 
+  "preservim/vim-pencil",
+
+  "folke/twilight.nvim",
+
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  }
 
 }
 
