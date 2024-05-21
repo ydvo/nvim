@@ -11,4 +11,4 @@ require "user.colorscheme"
 require "user.rainbow-delimiters"
 require "user.alpha"
 require "user.commands"
-
+require "user.leap"

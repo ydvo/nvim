@@ -14,10 +14,10 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   "nvim-lua/popup.nvim", -- An implementation of the Popup API from vim in Neovim
-  "nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
+  "nvim-lua/plenary.nvim", -- Useful lua functions used by lots of plugins
 
   -- colorthemes
-  {"bluz71/vim-moonfly-colors", name = "moonfly"},
+  {"ydvo/vim-moonfly-oled", name = "moonfly"},
   "jacoborus/tender.vim",
   { 'kepano/flexoki-neovim', name = 'flexoki' },
   "rebelot/kanagawa.nvim",
@@ -82,31 +82,19 @@ local plugins = {
   end,
   },
 
-  -- -- Ultimate AutoPair
-  -- {
-  --   'altermo/ultimate-autopair.nvim',
-  --   event={'InsertEnter','CmdlineEnter'},
-  --   branch='v0.6', --recommended as each new version will have breaking changes
-  --   opts={},
-  --   config = function()
-  --     require("ultimate-autopair").setup({
-  --     })
-  --   end,
-  -- },
-
   -- Rainbow Delimiters
   "HiPhish/rainbow-delimiters.nvim",
 
-  -- Surround
-  {
-    "kylechui/nvim-surround",
-    version = "*", -- Use for stability; omit to use `main` branch for the latest features
-    config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
-  },
+  -- -- Surround !Conflicts with leap
+  -- {
+  --   "kylechui/nvim-surround",
+  --   version = "*", -- Use for stability; omit to use `main` branch for the latest features
+  --   config = function()
+  --       require("nvim-surround").setup({
+  --           -- Configuration here, or leave empty to use defaults
+  --       })
+  --   end
+  -- },
 
   -- Start Screen
   "goolord/alpha-nvim",
@@ -138,7 +126,9 @@ local plugins = {
       -- or leave it empty to use the default settings
       -- refer to the configuration section below
     }
-  }
+  },
+
+  "ggandor/leap.nvim",
 
 }
 
