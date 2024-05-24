@@ -2,7 +2,7 @@
 local servers = {
   -- default installed LSP
   "clangd",
-  "basedpyright",
+  "pyright",
   "marksman",
   "lua_ls",
   "autotools_ls"

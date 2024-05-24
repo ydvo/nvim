@@ -130,6 +130,7 @@ local plugins = {
 
   "ggandor/leap.nvim",
 
+  "tpope/vim-fugitive",
 }
 
 local opts = {}
