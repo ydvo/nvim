@@ -37,7 +37,7 @@ vim.api.nvim_create_user_command(
     function()
         local file = vim.fn.expand('%:p')
         vim.cmd('w') -- Save the current file
-        vim.fn.jobstart('matlab -nodesktop -nosplash -r "run(\'' .. file .. '\'); exit;"', {
+        vim.fn.jobstart('matlab -nodesktop -nosplash -r "run(\'' .. file .. '\');"', {
             stdout_buffered = true,
             on_stdout = function(_, data)
                 if data then
