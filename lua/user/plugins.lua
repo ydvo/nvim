@@ -41,7 +41,6 @@ local plugins = {
   "neovim/nvim-lspconfig", -- enable LSP
   "williamboman/mason.nvim", -- simple to use language server installer
   "williamboman/mason-lspconfig.nvim", -- simple to use language server installer
-  "jose-elias-alvarez/null-ls.nvim", -- LSP diagnostics and code actions
 
   -- Telescope
   "nvim-telescope/telescope.nvim",
@@ -71,15 +70,16 @@ local plugins = {
 
   -- Oil
   {
-  'stevearc/oil.nvim',
-  opts = {},
-  -- Optional dependencies
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  config = function()
-    require("oil").setup({
-      default_file_explorer = true,
-    })
-  end,
+    'stevearc/oil.nvim',
+    event = "VeryLazy",
+    opts = {},
+    -- Optional dependencies
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("oil").setup({
+        default_file_explorer = true,
+      })
+    end,
   },
 
   -- Rainbow Delimiters
@@ -122,15 +122,18 @@ local plugins = {
   {
     "folke/zen-mode.nvim",
     opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
     }
   },
 
-  "ggandor/leap.nvim",
+  {
+    "ggandor/leap.nvim",
+    event = "VeryLazy",
+  },
 
-  "tpope/vim-fugitive",
+  {
+    "tpope/vim-fugitive",
+    event = "VeryLazy",
+  },
 }
 
 local opts = {}

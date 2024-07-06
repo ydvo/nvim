@@ -9,7 +9,7 @@ return {
     settings = {
       MATLAB = {
         indexWorkspace = false,
-        installPath = 'C:\\Program Files\\MATLAB\\R2024a',
+        installPath = '/usr/local/MATLAB/R2024a',
         matlabConnectionTiming = 'onStart',
         telemetry = true,
       },
