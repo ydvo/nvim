@@ -90,3 +90,7 @@ keymap("n", "<leader>fb", "<cmd>lua require'telescope.builtin'.buffers(require('
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true, desc = "Live Grep" }
 )
 
+-- Matlab --
+keymap("n", "<C-m>", "<cmd>MatlabCliRunCell<CR>", term_opts)
+
+-- Terminal --

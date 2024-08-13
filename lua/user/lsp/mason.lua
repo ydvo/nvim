@@ -6,7 +6,8 @@ local servers = {
   "marksman",
   "lua_ls",
   "autotools_ls",
-  "matlab_ls"
+  "matlab_ls",
+  "hdl_checker",
 }
 
 local settings = {
