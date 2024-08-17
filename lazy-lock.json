@@ -9,6 +9,7 @@
   "cmp-nvim-lua": { "branch": "main", "commit": "f12408bdb54c39c23e67cab726264c10db33ada8" },
   "cmp-path": { "branch": "main", "commit": "91ff86cd9c29299a64f968ebb45846c485725f23" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
+  "distant.nvim": { "branch": "v0.3", "commit": "823267cf3b77cf9a7ae28454926eabc18fec1ba0" },
   "flexoki": { "branch": "main", "commit": "975654bce67514114db89373539621cff42befb5" },
   "friendly-snippets": { "branch": "main", "commit": "45a1b96e46efe5fce8af325d4bed45feb9d29d0f" },
   "kanagawa.nvim": { "branch": "master", "commit": "e5f7b8a804360f0a48e40d0083a97193ee4fcc87" },
@@ -34,7 +35,6 @@
   "vim-fugitive": { "branch": "master", "commit": "8c8cdf4405cb8bdb70dd9812a33bb52363a87dbc" },
   "vim-matlab": { "branch": "master", "commit": "71ec381926b80108b25ed965df4c43f5e1caf502" },
   "vim-pencil": { "branch": "master", "commit": "6d70438a8886eaf933c38a7a43a61adb0a7815ed" },
-  "vimtex": { "branch": "master", "commit": "5ac62e0315c6f54f53a7d6da7c485cf8e9cf7240" },
   "which-key.nvim": { "branch": "main", "commit": "af4ded85542d40e190014c732fa051bdbf88be3d" },
   "zen-mode.nvim": { "branch": "main", "commit": "21976479c7a0146b05a42707cf91c86b1e510945" }
 }

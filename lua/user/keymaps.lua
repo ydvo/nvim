@@ -94,3 +94,6 @@ keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { noremap = true, sile
 keymap("n", "<C-m>", "<cmd>MatlabCliRunCell<CR>", term_opts)
 
 -- Terminal --
+
+-- Write as sudo --
+keymap('c', 'w!!', "<esc>:lua require'user.utils'.sudo_write()<CR>", { silent = true })
