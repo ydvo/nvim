@@ -9,6 +9,7 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/LuaSnip/"})
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -67,12 +68,12 @@ cmp.setup {
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif luasnip.expandable() then
-        luasnip.expand()
+      -- elseif luasnip.expandable() then
+      --   luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
-      elseif check_backspace() then
-        fallback()
+      -- elseif check_backspace() then
+      --   fallback()
       else
         fallback()
       end

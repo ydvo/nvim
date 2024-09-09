@@ -34,7 +34,14 @@ local plugins = {
   "hrsh7th/cmp-nvim-lua",
 
   -- snippets
-  "L3MON4D3/LuaSnip", --snippet engine
+  {
+    "L3MON4D3/LuaSnip", --snippet engine
+    config = function()
+      require("luasnip").config.set_config({
+        enable_autosnippets = true
+      })
+    end
+  },
   "rafamadriz/friendly-snippets", -- a bunch of snippets to use
 
   -- LSP
@@ -144,15 +151,15 @@ local plugins = {
     end,
   },
 
-  -- {
-  --   "lervag/vimtex",
-  --   lazy = false,     -- we don't want to lazy load VimTeX
-  --   -- tag = "v2.15", -- uncomment to pin to a specific release
-  --   init = function()
-  --     -- VimTeX configuration goes here, e.g.
-  --     vim.g.vimtex_view_method = "zathura"
-  --   end
-  --   },
+  {
+    "lervag/vimtex",
+    lazy = false,     -- we don't want to lazy load VimTeX
+    -- tag = "v2.15", -- uncomment to pin to a specific release
+    init = function()
+      --Vimtex configuration
+      vim.g.vimtex_view_method = "zathura"
+    end
+  },
 
 }
 
